@@ -66,13 +66,13 @@ const Register = () => {
   const [timeTo, setTimeTo] = useState("");
 
   const [radioBtnYes, setRadioBtnYes] = useState("Yes")
-  const [radioBtnNo, setRadioBtnNo] = useState("No")
+  // const [radioBtnNo, setRadioBtnNo] = useState("No")
 
   const [errMsg, setErrMsg] = useState("");
   const [propertyFoundMsg, setPropertyFoundMsg] = useState("")
 
   const [classname,setClassname] = useState(false)
-  const [classname2, setClassname2] = useState(false)
+  // const [classname2, setClassname2] = useState(false)
 
   useEffect(() => {
     userRef.current.focus();
@@ -292,7 +292,7 @@ const Register = () => {
     navigate('/PropertyUpload')
   }
   // console.log(success);
-  if (success == true) {
+  if (success === true) {
     navigateToProp()
   }
 
