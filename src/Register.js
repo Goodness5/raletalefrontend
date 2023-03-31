@@ -276,9 +276,9 @@ const Register = () => {
   const handleChangesForRadioBtnYes = e => {
     setRadioBtnYes(e.target.value)
   }
-  const handleChangesForRadioBtnNo = e => {
-    setRadioBtnNo(e.target.value)
-  }
+  // const handleChangesForRadioBtnNo = e => {
+  //   setRadioBtnNo(e.target.value)
+  // }
 
 
   const navigate = useNavigate();
@@ -515,7 +515,7 @@ const Register = () => {
                       </div>
                       <div className="yes-no-container">
                         <p>No</p>
-                        <input onClick={handleChangesForRadioBtnNo} type="radio" value="no" name="petQuerry" />
+                        <input onClick={handleChangesForRadioBtnYes} type="radio" value="no" name="petQuerry" />
                       </div>
                     </div>
                     <div className={radioBtnYes === "Yes" ? "show petinput" : "hide"}>
