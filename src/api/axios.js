@@ -1,5 +1,26 @@
-import Axios from "axios";
+const axiosInstance = axios.create({
+    baseURL: "https://hosted-backend-url/api/",
+    headers: {
+      'Content-Type': 'application/json',
+      withCredentials: true
+    }
+  });
+  
 
-export default Axios.create({
-    baseURL:'http://localhost:3001'
+  const mysql = require('mysql')
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'dbuser',
+  password: 's3kreee7',
+  database: 'my_db'
 })
+
+connection.connect()
+
+connection.query('SELECT 1 + 1 AS solution', (err, rows, fields) => {
+  if (err) throw err
+
+  console.log('The solution is: ', rows[0].solution)
+})
+
+connection.end()
