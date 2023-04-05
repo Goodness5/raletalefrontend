@@ -145,6 +145,6 @@ db.query("SELECT * FROM users where Username = ? AND Password = ?",  [username, 
 })
 
 const port = process.env.PORT || 3001;
-app.listen(port, () => {
+app.listen({port, host: "0.0.0.0" },() => {
   console.log(`Server running on port ${port}`);
 });
